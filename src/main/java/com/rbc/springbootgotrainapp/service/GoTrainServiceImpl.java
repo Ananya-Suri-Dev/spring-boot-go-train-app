@@ -25,14 +25,14 @@ public class GoTrainServiceImpl {
     }
 
     public List<GoTrain> getScheduleForSpecificLine(String line){
-        //exceptional handling
+        //exception handling
         if(goTrainRepository.findByLine(line).isEmpty())
             throw new LineNotFoundException("HTTP 404 (Not Found) : Line does not exist");
         return goTrainRepository.findByLine(line);
     }
 
     public GoTrain getScheduleByLineAndDeparture(String line, Timestamp departure){
-        //exceptional handling
+        //exception handling
         if(goTrainRepository.findByLine(line).isEmpty())
             throw new LineNotFoundException("HTTP 404 (Not Found) : Line does not exist");
         return goTrainRepository.findByLineAndDeparture(line,departure);

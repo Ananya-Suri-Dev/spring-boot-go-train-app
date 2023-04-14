@@ -13,4 +13,7 @@ All three end-points can be accessed through the following URLs
 Steps to run the applications
 
 -Compile and build your application (mvn clean compile (if using terminal))
+
 -run the application (mvn spring-boot:run (if using the terminal))
+
+-Command to run application and skipping tests mvn spring-boot:run -DskipTests

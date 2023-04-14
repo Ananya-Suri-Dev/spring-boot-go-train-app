@@ -21,9 +21,12 @@ public class LineExceptionHandler {
         return new ResponseEntity<>(lineException, HttpStatus.NOT_FOUND);
     }
 
-    //TODO
-    //2. If line exists but no trains departing, the request should be successful and return empty array
-
-
+    //2. Return 400 for bad Date format request
+    @ExceptionHandler(AppBadRequestException.class)
+    public ResponseEntity<String> handleAppBadRequestException(AppBadRequestException e) {
+        return ResponseEntity
+                .status(HttpStatus.BAD_REQUEST)
+                .body(e.getMessage());
+    }
 
 }
