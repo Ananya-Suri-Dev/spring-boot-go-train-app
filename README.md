@@ -1,6 +1,6 @@
 GoTrain-Spring-Boot-REST-API
 
-This application can be tested via PostMan or the browser.
+This application can be tested via Postman or the browser.
 All three end-points can be accessed through the following URLs
 
 -GET Request to get all the schedules : http://localhost:8080/api/goTrain/v1/schedules
